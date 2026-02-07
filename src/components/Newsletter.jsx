@@ -18,7 +18,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 px-6 bg-zinc-950">
+    <section className="py-16 md:py-20 lg:py-24 px-6 bg-zinc-950">
       <div className="container mx-auto">
         <div className="glass p-8 md:p-24 lg:p-32 rounded-[4rem] text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-64 h-64 bg-amber-500/10 blur-[100px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
@@ -64,18 +64,6 @@ const Newsletter = () => {
                 )}
               </button>
             </form>
-
-            <div className="mt-12 flex flex-wrap justify-center gap-10 text-[10px] font-black tracking-widest text-white/30 uppercase">
-              <span className="flex items-center gap-2">
-                <ArrowUpRight className="w-3 h-3" /> Consulting
-              </span>
-              <span className="flex items-center gap-2">
-                <ArrowUpRight className="w-3 h-3" /> Direction
-              </span>
-              <span className="flex items-center gap-2">
-                <ArrowUpRight className="w-3 h-3" /> Format Sales
-              </span>
-            </div>
           </motion.div>
         </div>
       </div>

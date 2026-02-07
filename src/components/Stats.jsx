@@ -10,8 +10,8 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-12 md:py-20 px-6 bg-zinc-950">
-      <div className="flex flex-wrap justify-center gap-12 md:gap-32 border-y border-white/5 py-20 md:py-40">
+    <section className="py-8 md:py-12 px-6 bg-zinc-950">
+      <div className="flex flex-wrap justify-center gap-12 md:gap-32 border-y border-white/5 py-12 md:py-24">
         {stats.map((stat, i) => (
           <motion.div
             key={i}

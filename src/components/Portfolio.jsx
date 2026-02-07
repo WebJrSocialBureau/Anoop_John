@@ -7,7 +7,7 @@ const Portfolio = ({ projects }) => {
   return (
     <section
       id="works"
-      className="py-24 md:py-32 lg:py-40 px-6 md:px-12 max-w-[1700px] mx-auto"
+      className="py-16 md:py-20 lg:py-24 px-6 md:px-12 max-w-[1700px] mx-auto"
     >
       <PremiumHeading title="Selected Works" subtitle="The Portfolio" />
 
@@ -32,7 +32,7 @@ const Portfolio = ({ projects }) => {
             >
               <img
                 src={proj.img}
-                className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.7] group-hover:scale-110 transition-all duration-2000 ease-out"
+                className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.7] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-2000 ease-out"
                 alt={proj.title}
               />
               <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent transition-opacity group-hover:opacity-80" />
@@ -49,9 +49,6 @@ const Portfolio = ({ projects }) => {
                         {proj.org} • {i + 1}
                       </span>
                     </motion.div>
-                  </div>
-                  <div className="w-16 h-16 rounded-full glass flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 text-white">
-                    <ArrowUpRight className="w-6 h-6" />
                   </div>
                 </div>
 

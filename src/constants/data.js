@@ -3,7 +3,7 @@ export const PROJECTS = [
     title: "Star Magic",
     org: "Flowers TV",
     desc: "A cultural phenomenon that transformed a standard game show into a celebrity-driven variety spectacle. Introduced AR elements and redefined floor games for a global Malayali audience.",
-    img: "/Star_Magic.jpg",
+    img: "/Star_Magic.png",
     year: "2016-2023",
     role: "Senior Director / Creative Head"
   },
@@ -11,7 +11,7 @@ export const PROJECTS = [
     title: "Comedy Super Nite",
     org: "Flowers TV",
     desc: "The flagship show that blended celebrity soul-talk with high-octane comedy. Won the Kerala State Television Award for Best TV Show under his direction.",
-    img: "/Comedy_Super_Night.png",
+    img: "/comedy_super_night.png",
     year: "2014-2016",
     role: "Director / Creative Head"
   },
@@ -19,7 +19,7 @@ export const PROJECTS = [
     title: "The Super Show",
     org: "Zee Keralam",
     desc: "A grand visual spectacle focusing on high-energy entertainment and massive scale, pushing the technological limits of regional television.",
-    img: "/super_show.jpg",
+    img: "/super_show.png",
     year: "2023-Present",
     role: "Chief Content Officer"
   }

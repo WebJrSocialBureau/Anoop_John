@@ -17,16 +17,16 @@ const Navbar = () => {
         </motion.div>
 
         <div className="flex gap-12 items-center">
-          <div className="hidden md:flex gap-10 text-[9px] font-black tracking-[0.4em] uppercase opacity-60 text-white">
-            <a href="#works" className="hover:opacity-100 transition-opacity">
+          <div className="hidden md:flex gap-10 text-[11px] font-black tracking-[0.4em] uppercase text-white/90">
+            <a href="#works" className="hover:text-amber-500 transition-colors">
               Portfolio
             </a>
-            <a href="#about" className="hover:opacity-100 transition-opacity">
+            <a href="#about" className="hover:text-amber-500 transition-colors">
               Legacy
             </a>
             <a
               href="#experience"
-              className="hover:opacity-100 transition-opacity"
+              className="hover:text-amber-500 transition-colors"
             >
               Timeline
             </a>

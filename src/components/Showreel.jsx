@@ -9,7 +9,7 @@ const Showreel = () => {
   const rotate = useTransform(scrollYProgress, [0.4, 0.6], [5, 0]);
 
   return (
-    <section className="py-40 px-6 bg-black overflow-hidden">
+    <section className="py-24 px-6 bg-black overflow-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
           <div>

@@ -9,17 +9,17 @@ const Hero = () => {
   const yTranslate = useTransform(scrollYProgress, [0, 0.2], [0, -100]);
 
   return (
-    <section className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
+    <section className="relative h-screen flex flex-col justify-end md:justify-center items-center px-6 pb-24 md:pb-0 overflow-hidden">
       <motion.div
         style={{ scale, opacity, y: yTranslate }}
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop"
-          className="w-full h-full object-cover brightness-[0.2]"
+          src="/hero_image.png"
+          className="w-full h-full object-cover object-[20%_center] md:object-[15%_center] brightness-[0.9]"
           alt="Hero Cinematic"
         />
-        <div className="absolute inset-0 bg-linear-to-l from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-l from-black/90 via-black/40 to-transparent" />
         <motion.div
           animate={{
             opacity: [0.3, 0.5, 0.3],
@@ -31,23 +31,24 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="container mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col items-end text-right">
+      <div className="container mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col items-center md:items-end text-center md:text-right">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="flex items-center justify-end gap-4 mb-8">
-              <span className="text-amber-500 text-[10px] font-black uppercase tracking-[0.6em]">
+            <div className="flex items-center justify-center md:justify-end gap-3 md:gap-4 mb-6 md:mb-8">
+              <span className="text-amber-500 text-[8px] md:text-[10px] font-black uppercase tracking-[0.6em]">
                 Directing the Future
               </span>
-              <div className="w-12 h-px bg-amber-500" />
+              <div className="w-8 md:w-12 h-px bg-amber-500" />
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-7xl font-serif font-bold leading-none mb-10 tracking-tighter text-white uppercase">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8 md:mb-10 tracking-tighter text-white uppercase drop-shadow-2xl">
               Anoop <span className="italic font-light text-outline">John</span>
-              <span className="block text-white/40 text-lg sm:text-xl md:text-3xl mt-6 tracking-normal normal-case font-light italic font-serif">
+              <span className="block text-amber-500 text-base sm:text-lg md:text-3xl mt-4 md:mt-6 tracking-normal normal-case font-light italic font-serif drop-shadow-xl">
                 Media Architect & Non-Fiction Visionary
               </span>
             </h1>
@@ -55,11 +56,12 @@ const Hero = () => {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="flex flex-col md:flex-row-reverse gap-12 items-end md:items-center"
+            className="flex flex-col items-center md:items-end gap-12"
           >
-            <p className="max-w-xs text-sm text-gray-400 font-light leading-relaxed">
+            <p className="max-w-xs text-xs md:text-sm text-gray-400 font-light leading-relaxed">
               Architecting cult-hits and high-energy formats with 17+ years of
               unfiltered creative disruption in television.
             </p>

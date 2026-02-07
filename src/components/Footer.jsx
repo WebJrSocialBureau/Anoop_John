@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="py-24 md:py-32 lg:py-40 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden"
+      className="pt-16 md:pt-20 lg:pt-24 pb-5 px-6 md:px-12 lg:px-20 bg-black relative overflow-hidden"
     >
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none text-white">
         <h2 className="text-[50vw] font-serif font-black absolute -bottom-1/4 -right-1/4 select-none whitespace-nowrap leading-none italic">
@@ -27,22 +27,7 @@ const Footer = () => {
                 href="mailto:hello@anoopjohn.media"
                 className="text-xl sm:text-3xl md:text-6xl font-light hover:text-amber-500 transition-colors flex items-center gap-6 group font-serif text-white"
               >
-                hello@anoopjohn.media{" "}
-                <ArrowUpRight className="w-5 h-5 md:w-12 md:h-12 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform" />
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-24 items-end text-right">
-            <div className="flex flex-col gap-6 text-[10px] font-black uppercase tracking-[0.4em] text-white">
-              <a href="#" className="hover:text-amber-500 transition-colors">
-                Instagram — Feed
-              </a>
-              <a href="#" className="hover:text-amber-500 transition-colors">
-                LinkedIn — Network
-              </a>
-              <a href="#" className="hover:text-amber-500 transition-colors">
-                IMDb — Filmography
+                anoop@time7.in
               </a>
             </div>
           </div>
@@ -51,7 +36,6 @@ const Footer = () => {
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-black tracking-[0.4em] text-gray-700">
           <div className="flex flex-col md:flex-row gap-8">
             <span>© 2024 ANOOP JOHN MEDIA GROUP</span>
-            <span className="text-white/20">PRIVATE & CONFIDENTIAL</span>
           </div>
           <span>KERALA, INDIA</span>
         </div>

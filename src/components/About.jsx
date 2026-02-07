@@ -5,7 +5,7 @@ import PremiumHeading from "./PremiumHeading";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 lg:py-40 bg-zinc-950/30">
+    <section id="about" className="py-16 md:py-20 lg:py-24 bg-zinc-950/30">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row gap-12 lg:gap-24 items-center">
         <div className="flex-1">
           <PremiumHeading title="Beyond the Lens" subtitle="The Legacy" />

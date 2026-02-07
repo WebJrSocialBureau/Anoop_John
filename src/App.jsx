@@ -1,4 +1,4 @@
-import React from "react";
+import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -25,6 +25,7 @@ import {
 const App = () => {
   return (
     <div className="bg-[#050505] min-h-screen selection:bg-amber-500/30 overflow-x-hidden">
+      <SmoothScroll />
       <CustomCursor />
       <Navbar />
       <main>

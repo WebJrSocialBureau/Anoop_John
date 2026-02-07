@@ -6,8 +6,16 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if it's a touch device
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(pointer: coarse)").matches);
+    };
+    checkMobile();
+
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     const moveCursor = (e) => setPosition({ x: e.clientX, y: e.clientY });
     const handleMouseDown = () => setIsClicking(true);
     const handleMouseUp = () => setIsClicking(false);
@@ -39,6 +47,8 @@ const CustomCursor = () => {
       observer.disconnect();
     };
   }, []);
+
+  if (isMobile) return null;
 
   return (
     <motion.div
