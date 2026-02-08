@@ -100,4 +100,25 @@ export const NETWORKS = [
   { name: "SONY MEDIA", url: "https://www.sonypictures.com/" }
 ];
 
+export const BLOGS = [
+
+  {
+    id: 1,
+    title: "The Launch of Big TV Malayalam",
+    date: "Feb 8, 2026",
+    category: "Announcement",
+    excerpt: "Marking a new chapter in regional media with the official launch of Big TV Malayalam, redefining digital entertainment for the global audience.",
+    image: "/bigtv.png"
+  },
+
+  {
+    id: 2,
+    title: "Behind the Scenes of Star Magic",
+    date: "Jan 28, 2026",
+    category: "Production",
+    excerpt: "A deep dive into the creative process that turned a game show into a cultural phenomenon.",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop"
+  },
+];
+
 

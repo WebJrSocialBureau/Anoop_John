@@ -13,6 +13,8 @@ import Stats from "./components/Stats";
 import Marquee from "./components/Marquee";
 import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
+import Blogs from "./components/Blogs";
+
 import {
   PROJECTS,
   TIMELINE,
@@ -37,7 +39,9 @@ const App = () => {
         <Awards awards={AWARDS_LIST} />
         <Stats />
         <Experience timeline={TIMELINE} />
+        <Blogs />
         <Newsletter />
+
         <Marquee />
       </main>
       <BackToTop />
