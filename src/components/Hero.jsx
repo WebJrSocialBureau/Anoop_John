@@ -15,7 +15,7 @@ const Hero = () => {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/hero_image.png"
+          src="/Anoop_john.png"
           className="w-full h-full object-cover object-[20%_center] md:object-[15%_center] brightness-[0.9]"
           alt="Hero Cinematic"
         />

@@ -57,7 +57,7 @@ const Vision = ({ pillars }) => {
           whileInView={{ opacity: 1 }}
           className="mt-16 md:mt-32 text-center"
         >
-          <p className="text-3xl sm:text-5xl md:text-8xl font-serif font-black text-white/5 italic select-none">
+          <p className="text-3xl sm:text-5xl md:text-8xl font-serif font-black text-white/30 italic select-none">
             IDEATE • INNOVATE • IMPACT
           </p>
         </motion.div>

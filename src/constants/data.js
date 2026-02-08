@@ -92,4 +92,12 @@ export const EXPERTISE = [
   { title: "Talent Mentorship", tags: ["Performance Coaching", "Celebrity Management", "Masterclasses"] }
 ];
 
+export const NETWORKS = [
+  { name: "FLOWERS TV", url: "https://www.flowerstv.in/" },
+  { name: "ZEE KERALAM", url: "https://www.zee5.com/tv-shows/zee-keralam-hd/0-9-129" },
+  { name: "MAZHAVIL MANORAMA", url: "https://www.manoramamax.com/" },
+  { name: "ASIANET", url: "https://www.asianetnews.com/" },
+  { name: "SONY MEDIA", url: "https://www.sonypictures.com/" }
+];
+
 

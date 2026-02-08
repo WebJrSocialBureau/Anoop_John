@@ -13,7 +13,7 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           className="text-xl font-serif font-black tracking-tighter text-white"
         >
-          ANOOP JOHN<span className="text-amber-500">.</span>
+          ANOOP JOHN
         </motion.div>
 
         <div className="flex gap-12 items-center">
