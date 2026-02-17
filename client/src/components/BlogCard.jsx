@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Calendar, Tag, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog, index }) => {
   return (
@@ -40,13 +41,16 @@ const BlogCard = ({ blog, index }) => {
           {blog.excerpt}
         </p>
 
-        <button className="flex items-center gap-2 text-[10px] font-black tracking-[0.3em] uppercase text-white group/btn">
+        <Link
+          to={`/blog/${blog._id}`}
+          className="flex items-center gap-2 text-[10px] font-black tracking-[0.3em] uppercase text-white group/btn"
+        >
           Read Story
           <ArrowRight
             size={14}
             className="text-red-500 group-hover/btn:translate-x-1 transition-transform"
           />
-        </button>
+        </Link>
       </div>
     </motion.div>
   );

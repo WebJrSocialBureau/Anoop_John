@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: vijay-reddy-api
+    env: node
+    plan: free
+    region: ohio
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
