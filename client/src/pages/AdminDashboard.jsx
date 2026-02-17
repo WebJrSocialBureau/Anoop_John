@@ -150,7 +150,7 @@ const AdminDashboard = () => {
 
                   <div className="flex items-center gap-2">
                     <Link
-                      to={`/blogs/${blog._id}`}
+                      to={`/blog/${blog._id}`}
                       target="_blank"
                       className="p-3 bg-[#121212] border border-white/5 rounded-xl text-gray-400 hover:text-amber-500 hover:border-amber-500/50 transition-all"
                       title="View Post"

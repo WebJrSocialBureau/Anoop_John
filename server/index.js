@@ -30,7 +30,7 @@ const authRoutes = require('./routes/authRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 
 app.get('/', (req, res) => {
-  res.status(200).json({ status: 'success', message: 'Vijay Reddy API is live' });
+  res.status(200).json({ status: 'success', message: 'Anoop John API is live' });
 });
 
 app.use('/api/v1/auth', authRoutes);
