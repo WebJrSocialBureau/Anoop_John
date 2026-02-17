@@ -14,10 +14,6 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: [true, 'A blog must have an excerpt']
   },
-  image: {
-    type: String,
-    required: [true, 'A blog must have a featured image']
-  },
   author: {
     type: mongoose.Schema.ObjectId,
     ref: 'User',

@@ -12,20 +12,12 @@ const BlogCard = ({ blog, index }) => {
       transition={{ delay: index * 0.1, duration: 0.8 }}
       className="group bg-zinc-900/40 rounded-3xl overflow-hidden border border-white/5 hover:border-red-500/30 transition-all duration-500"
     >
-      <div className="relative h-64 overflow-hidden">
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-700"
-        />
-        <div className="absolute top-4 left-4">
+      <div className="p-8">
+        <div className="mb-4">
           <span className="px-3 py-1 bg-red-600 text-[10px] font-black tracking-widest uppercase text-white rounded-full">
             {blog.category}
           </span>
         </div>
-      </div>
-
-      <div className="p-8">
         <div className="flex items-center gap-4 text-zinc-500 text-[10px] font-bold tracking-widest uppercase mb-4">
           <span className="flex items-center gap-1">
             <Calendar size={12} className="text-red-500" />

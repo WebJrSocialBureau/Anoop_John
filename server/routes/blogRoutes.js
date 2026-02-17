@@ -1,46 +1,9 @@
 const express = require('express');
-const multer = require('multer');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const Blog = require('../models/blogModel');
 const User = require('../models/userModel');
 const router = express.Router();
-
-// Multer configuration
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/uploads');
-  },
-  filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-    cb(null, uniqueSuffix + path.extname(file.originalname));
-  }
-});
-
-const upload = multer({
-  storage: storage,
-  fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('image/')) {
-      cb(null, true);
-    } else {
-      cb(new Error('Only images are allowed'), false);
-    }
-  }
-});
-
-// Upload route
-router.post('/upload', upload.single('image'), (req, res) => {
-  console.log('UPLOAD_REQUEST [IMAGE]:', req.file ? req.file.filename : 'No file');
-  if (!req.file) {
-    return res.status(400).json({ status: 'fail', message: 'No file uploaded' });
-  }
-  
-  const protocol = req.protocol;
-  const host = req.get('host');
-  const imageUrl = `${protocol}://${host}/uploads/${req.file.filename}`;
-  
-  res.status(200).json({ status: 'success', data: { url: imageUrl } });
-});
 
 // Middleware to protect routes
 const protect = async (req, res, next) => {

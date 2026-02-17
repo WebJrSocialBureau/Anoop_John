@@ -41,18 +41,57 @@ const AdminDashboard = () => {
     }
   };
 
-  const handleDelete = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this blog?")) return;
-
-    try {
-      await axios.delete(`${API_URL}/blogs/${id}`, {
-        headers: { Authorization: `Bearer ${user.token}` },
-      });
-      toast.success("Blog deleted successfully");
-      fetchBlogs();
-    } catch (error) {
-      toast.error(error.response?.data?.message || "Failed to delete blog");
-    }
+  const handleDelete = (id) => {
+    toast.custom(
+      (t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          } max-w-md w-full bg-[#0a0a0a] border border-white/10 shadow-2xl rounded-2xl pointer-events-auto flex flex-col p-6 gap-6`}
+        >
+          <div className="flex flex-col gap-2">
+            <h3 className="text-xl font-serif font-bold text-white">
+              Delete Blog Post?
+            </h3>
+            <p className="text-gray-400 text-sm">
+              This action is permanent and cannot be undone. Are you sure you
+              want to proceed?
+            </p>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={async () => {
+                toast.dismiss(t.id);
+                try {
+                  await axios.delete(`${API_URL}/blogs/${id}`, {
+                    headers: { Authorization: `Bearer ${user.token}` },
+                  });
+                  toast.success("Blog deleted successfully");
+                  fetchBlogs();
+                } catch (error) {
+                  toast.error(
+                    error.response?.data?.message || "Failed to delete blog",
+                  );
+                }
+              }}
+              className="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl transition-all"
+            >
+              Delete
+            </button>
+            <button
+              onClick={() => toast.dismiss(t.id)}
+              className="flex-1 bg-white/5 hover:bg-white/10 text-white font-bold py-3 rounded-xl transition-all border border-white/10"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      ),
+      {
+        duration: 5000,
+        position: "top-center",
+      },
+    );
   };
 
   const filteredBlogs = blogs.filter(

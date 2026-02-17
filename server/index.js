@@ -17,12 +17,6 @@ app.set('trust proxy', true);
 app.use(express.json());
 app.use(cors());
 
-// Ensure uploads directory exists
-const uploadsDir = path.join(__dirname, 'public', 'uploads');
-if (!fs.existsSync(uploadsDir)) {
-  fs.mkdirSync(uploadsDir, { recursive: true });
-}
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Request Logger

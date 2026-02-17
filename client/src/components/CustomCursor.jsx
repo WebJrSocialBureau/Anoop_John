@@ -58,7 +58,7 @@ const CustomCursor = () => {
         y: position.y - 16,
         scale: isClicking ? 0.8 : isHovering ? 2.5 : 1,
       }}
-      transition={{ type: "spring", damping: 20, stiffness: 250, mass: 0.5 }}
+      transition={{ type: "spring", damping: 30, stiffness: 800, mass: 0.1 }}
     >
       {isHovering && <ArrowUpRight className="w-2 h-2 text-black" />}
     </motion.div>

@@ -89,14 +89,6 @@ const BlogDetail = () => {
             </div>
           </div>
 
-          <div className="aspect-video md:aspect-21/9 rounded-2xl md:rounded-3xl overflow-hidden mb-10 md:mb-16 border border-white/5">
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
           <div className="prose prose-invert prose-red max-w-none">
             <div
               className="text-zinc-300 text-base md:text-lg leading-relaxed whitespace-pre-wrap"
