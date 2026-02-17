@@ -68,13 +68,8 @@ const BlogForm = () => {
       );
 
       const uploadedUrl = response.data.data.url;
-      // The backend returns /uploads/filename. We need to prepend VITE_IMAGE_URL if available,
-      // or assume the frontend handles relative paths or proxying.
-      // Based on previous conversations, there might be a VITE_IMAGE_URL.
-      const baseUrl = import.meta.env.VITE_IMAGE_URL || "http://localhost:5000";
-      const finalUrl = `${baseUrl}${uploadedUrl}`;
-
-      setFormData({ ...formData, image: finalUrl });
+      // Backend now returns fully qualified URL (e.g. https://.../uploads/file.jpg)
+      setFormData({ ...formData, image: uploadedUrl });
       toast.success("Image uploaded successfully!");
     } catch (error) {
       console.error("Upload error:", error);
