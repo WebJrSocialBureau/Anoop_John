@@ -83,11 +83,11 @@ const BlogDetail = () => {
             <meta property="og:type" content="article" />
             <link
               rel="canonical"
-              href={`https://anoopjohn.com/blogs/${blog._id}`}
+              href={`https://www.anoopjohnofficial.com/blogs/${blog._id}`}
             />
             <meta
               property="og:url"
-              content={`https://anoopjohn.com/blogs/${blog._id}`}
+              content={`https://www.anoopjohnofficial.com/blogs/${blog._id}`}
             />
             <meta name="robots" content="index, follow" />
           </Helmet>

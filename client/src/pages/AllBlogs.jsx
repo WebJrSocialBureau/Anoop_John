@@ -16,8 +16,11 @@ const AllBlogs = () => {
           property="og:description"
           content="Behind the scenes and creative insights from award-winning TV director Anoop John."
         />
-        <link rel="canonical" href="https://anoopjohn.com/blogs" />
-        <meta property="og:url" content="https://anoopjohn.com/blogs" />
+        <link rel="canonical" href="https://www.anoopjohnofficial.com/blogs" />
+        <meta
+          property="og:url"
+          content="https://www.anoopjohnofficial.com/blogs"
+        />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
       </Helmet>

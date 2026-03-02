@@ -51,9 +51,9 @@ const Home = () => (
       <title>Anoop John | Award-Winning TV Director & Media Professional</title>
       <meta
         name="description"
-        content="Official portfolio of Anoop John, award-winning TV director, media architect, and non-fiction visionary with 17+ years of experience in television disruption."
+        content="Official portfolio of Anoop John, award-winning TV director and media architect with 17+ years of experience in technical and creative TV disruption."
       />
-      <link rel="canonical" href="https://anoopjohn.com" />
+      <link rel="canonical" href="https://www.anoopjohnofficial.com" />
       <meta name="robots" content="index, follow" />
       <meta
         property="og:title"
@@ -64,7 +64,7 @@ const Home = () => (
         content="Explore the creative journey and portfolio of Anoop John, a visionary in television direction and production."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://anoopjohn.com" />
+      <meta property="og:url" content="https://www.anoopjohnofficial.com" />
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
     <Hero />
