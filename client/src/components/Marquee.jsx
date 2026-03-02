@@ -11,7 +11,7 @@ const Marquee = () => {
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
         transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-        className="flex whitespace-nowrap gap-12 md:gap-20 items-center w-max"
+        className="flex whitespace-nowrap gap-12 md:gap-20 items-center w-max will-change-transform"
       >
         {displayNetworks.map((net, i) => (
           <a

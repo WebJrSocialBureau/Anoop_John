@@ -40,14 +40,14 @@ const About = () => {
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="glass p-8 rounded-2xl border-white/5 group hover:border-amber-500/40 transition-all">
               <Trophy className="w-8 h-8 text-amber-500 mb-6" />
-              <h4 className="text-white font-bold mb-2">State Laureate</h4>
+              <h3 className="text-white font-bold mb-2">State Laureate</h3>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
                 Best TV Show Recognition
               </p>
             </div>
             <div className="glass p-8 rounded-2xl border-white/5 group hover:border-amber-500/40 transition-all">
               <Target className="w-8 h-8 text-amber-500 mb-6" />
-              <h4 className="text-white font-bold mb-2">TRP Disruptor</h4>
+              <h3 className="text-white font-bold mb-2">TRP Disruptor</h3>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">
                 500M+ Viewership Reach
               </p>
@@ -63,7 +63,7 @@ const About = () => {
           >
             <img
               src="/Anoop John.png"
-              alt="Anoop John - Media Architect"
+              alt="Anoop John - Award-Winning Media Architect and TV Director"
               className="w-full aspect-4/5 object-cover object-[15%_center] transition-all duration-1000 grayscale hover:brightness-110"
               loading="lazy"
               decoding="async"

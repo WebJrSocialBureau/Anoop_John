@@ -33,7 +33,7 @@ const Portfolio = ({ projects }) => {
               <img
                 src={proj.img}
                 className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.7] group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-110 transition-all duration-2000 ease-out bg-zinc-800"
-                alt={proj.title}
+                alt={`${proj.title} - ${proj.org} Television Production`}
                 loading="lazy"
                 decoding="async"
               />

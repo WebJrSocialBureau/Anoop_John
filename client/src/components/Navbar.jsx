@@ -39,6 +39,8 @@ const Navbar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white hover:text-black transition-all text-white border border-white/10"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <X className="w-4 h-4" />

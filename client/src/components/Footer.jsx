@@ -26,6 +26,7 @@ const Footer = () => {
               <a
                 href="mailto:anoopjohn@gmail.com"
                 className="text-xl sm:text-3xl md:text-6xl font-light hover:text-amber-500 transition-colors flex items-center gap-6 group font-serif text-white"
+                aria-label="Send an email to Anoop John"
               >
                 anoopjohn@gmail.com
               </a>

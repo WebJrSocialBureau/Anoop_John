@@ -29,9 +29,9 @@ const Awards = ({ awards }) => {
               <div className="text-amber-500 text-[9px] font-black tracking-widest uppercase mb-4">
                 {award.year}
               </div>
-              <h4 className="text-xl font-serif font-bold text-white mb-2 leading-tight">
+              <h3 className="text-xl font-serif font-bold text-white mb-2 leading-tight">
                 {award.name}
-              </h4>
+              </h3>
               <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-4">
                 {award.category}
               </p>
