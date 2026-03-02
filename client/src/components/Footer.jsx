@@ -24,10 +24,10 @@ const Footer = () => {
                 Inquiry / Masterclasses / Productions
               </p>
               <a
-                href="mailto:webjr.socialbureau@gmail.com"
+                href="mailto:anoopjohn@gmail.com"
                 className="text-xl sm:text-3xl md:text-6xl font-light hover:text-amber-500 transition-colors flex items-center gap-6 group font-serif text-white"
               >
-                webjr.socialbureau@gmail.com
+                anoopjohn@gmail.com
               </a>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 import { LogIn, Mail, Lock, Loader2, Eye, EyeOff } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -29,6 +30,14 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#050505] px-4">
+      <Helmet>
+        <title>Login | Admin Access | Anoop John Portfolio</title>
+        <meta
+          name="description"
+          content="Secure login for the Anoop John portfolio admin dashboard. Manage blog posts and site content."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

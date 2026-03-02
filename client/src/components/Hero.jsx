@@ -16,10 +16,15 @@ const Hero = () => {
       >
         <img
           src="/Anoop_john.png"
-          className="w-full h-full object-cover object-[20%_center] md:object-[15%_center] brightness-[0.9]"
-          alt="Hero Cinematic"
+          className="w-full h-full object-cover object-[15%_center] md:object-[15%_center] brightness-[0.8] md:brightness-[0.9]"
+          alt="Anoop John - Award-Winning TV Director"
+          fetchpriority="high"
+          loading="eager"
+          width="1920"
+          height="1080"
         />
-        <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-l from-black/90 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-black/40 md:bg-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t md:bg-linear-to-l from-black via-black/20 to-transparent" />
         <motion.div
           animate={{
             opacity: [0.3, 0.5, 0.3],
@@ -31,7 +36,7 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="container mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col items-center md:items-end text-center md:text-right">
+      <div className="container mx-auto px-6 md:px-20 relative z-10 w-full flex flex-col items-end text-right">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -39,7 +44,7 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="flex items-center justify-center md:justify-end gap-3 md:gap-4 mb-6 md:mb-8">
+            <div className="flex items-center justify-end gap-3 md:gap-4 mb-6 md:mb-8">
               <span className="text-amber-500 text-[8px] md:text-[10px] font-black uppercase tracking-[0.6em]">
                 Directing the Future
               </span>
@@ -59,7 +64,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="flex flex-col items-center md:items-end gap-12"
+            className="flex flex-col items-end gap-12"
           >
             <p className="max-w-xs text-xs md:text-sm text-gray-400 font-light leading-relaxed">
               Architecting cult-hits and high-energy formats with 17+ years of

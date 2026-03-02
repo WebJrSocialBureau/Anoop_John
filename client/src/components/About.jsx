@@ -63,11 +63,13 @@ const About = () => {
           >
             <img
               src="/Anoop John.png"
-              alt="Anoop John"
-              className="w-full object-cover transition-all duration-1000 grayscale hover:brightness-110"
+              alt="Anoop John - Media Architect"
+              className="w-full aspect-4/5 object-cover object-[15%_center] transition-all duration-1000 grayscale hover:brightness-110"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
-          <div className="absolute top-8 left-8 z-20">
+          <div className="absolute bottom-8 left-8 z-20">
             <div className="glass px-6 py-2 rounded-full text-[9px] font-black tracking-widest uppercase text-white border border-white/10">
               CCO — ZEE KERALAM
             </div>

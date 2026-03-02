@@ -23,6 +23,11 @@ const blogSchema = new mongoose.Schema({
     type: String,
     default: 'Media'
   },
+  metaDescription: {
+    type: String,
+    trim: true
+  },
+  keywords: [String],
   tags: [String],
   createdAt: {
     type: Date,

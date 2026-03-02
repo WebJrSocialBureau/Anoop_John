@@ -19,6 +19,8 @@ const BlogForm = () => {
     excerpt: "",
     content: "",
     category: "General",
+    metaDescription: "",
+    keywords: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -35,10 +37,9 @@ const BlogForm = () => {
       const response = await axios.get(`${API_URL}/blogs/${id}`);
       const blog = response.data.data.blog;
       setFormData({
-        title: blog.title || "",
-        excerpt: blog.excerpt || "",
-        content: blog.content || "",
         category: blog.category || "General",
+        metaDescription: blog.metaDescription || "",
+        keywords: blog.keywords ? blog.keywords.join(", ") : "",
       });
     } catch (error) {
       toast.error("Failed to fetch blog details");
@@ -57,11 +58,19 @@ const BlogForm = () => {
         headers: { Authorization: `Bearer ${user.token}` },
       };
 
+      const submissionData = {
+        ...formData,
+        keywords: formData.keywords
+          .split(",")
+          .map((tag) => tag.trim())
+          .filter(Boolean),
+      };
+
       if (isEditMode) {
-        await axios.patch(`${API_URL}/blogs/${id}`, formData, config);
+        await axios.patch(`${API_URL}/blogs/${id}`, submissionData, config);
         toast.success("Blog updated successfully!");
       } else {
-        await axios.post(`${API_URL}/blogs`, formData, config);
+        await axios.post(`${API_URL}/blogs`, submissionData, config);
         toast.success("Blog created successfully!");
       }
       navigate("/admin");
@@ -130,6 +139,37 @@ const BlogForm = () => {
                 }
                 className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-amber-500/50 transition-all resize-none"
                 placeholder="Summarize your blog post..."
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                <FileText className="w-4 h-4" />
+                SEO Meta Description (Optional)
+              </label>
+              <textarea
+                rows={2}
+                value={formData.metaDescription}
+                onChange={(e) =>
+                  setFormData({ ...formData, metaDescription: e.target.value })
+                }
+                className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-amber-500/50 transition-all resize-none"
+                placeholder="Specific description for search engines (defaults to excerpt)"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                <Tag className="w-4 h-4" />
+                SEO Keywords (Comma separated)
+              </label>
+              <input
+                type="text"
+                value={formData.keywords}
+                onChange={(e) =>
+                  setFormData({ ...formData, keywords: e.target.value })
+                }
+                className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-amber-500/50 transition-all"
+                placeholder="filmmaking, television, directing..."
               />
             </div>
           </div>

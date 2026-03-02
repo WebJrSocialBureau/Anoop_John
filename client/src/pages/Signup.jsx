@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 import { UserPlus, Mail, Lock, User, Loader2, Eye, EyeOff } from "lucide-react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -30,6 +31,14 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#050505] px-4">
+      <Helmet>
+        <title>Create Account | Admin | Anoop John Portfolio</title>
+        <meta
+          name="description"
+          content="Create an admin account for the Anoop John portfolio. Reserved for authorized personnel only."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

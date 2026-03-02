@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, User, Tag, Loader2 } from "lucide-react";
 
@@ -57,6 +58,39 @@ const BlogDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <Helmet>
+            <title>{`${blog.title} | Anoop John's Journal`}</title>
+            <meta
+              name="description"
+              content={
+                blog.metaDescription ||
+                blog.excerpt ||
+                blog.content.substring(0, 155).replace(/<[^>]*>?/gm, "")
+              }
+            />
+            {blog.keywords && blog.keywords.length > 0 && (
+              <meta name="keywords" content={blog.keywords.join(", ")} />
+            )}
+            <meta property="og:title" content={blog.title} />
+            <meta
+              property="og:description"
+              content={
+                blog.metaDescription ||
+                blog.excerpt ||
+                blog.content.substring(0, 155).replace(/<[^>]*>?/gm, "")
+              }
+            />
+            <meta property="og:type" content="article" />
+            <link
+              rel="canonical"
+              href={`https://anoopjohn.com/blogs/${blog._id}`}
+            />
+            <meta
+              property="og:url"
+              content={`https://anoopjohn.com/blogs/${blog._id}`}
+            />
+            <meta name="robots" content="index, follow" />
+          </Helmet>
           <Link
             to="/blogs"
             className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors mb-6 md:mb-8 group text-xs md:text-sm"
