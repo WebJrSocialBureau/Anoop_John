@@ -70,9 +70,14 @@ const About = () => {
             />
           </motion.div>
           <div className="absolute bottom-8 left-8 z-20">
-            <div className="glass px-6 py-2 rounded-full text-[9px] font-black tracking-widest uppercase text-white border border-white/10">
+            <a
+              href="https://www.zee5.com/tv-shows/zee-keralam-hd/0-9-129"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass px-6 py-2 rounded-full text-[9px] font-black tracking-widest uppercase text-white border border-white/10 hover:border-amber-500/50 hover:text-amber-500 transition-all block"
+            >
               CCO — ZEE KERALAM
-            </div>
+            </a>
           </div>
         </div>
       </div>

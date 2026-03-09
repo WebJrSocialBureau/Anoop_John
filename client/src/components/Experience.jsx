@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import PremiumHeading from "./PremiumHeading";
+import { NETWORK_URLS } from "../constants/data";
 
 const Experience = ({ timeline }) => {
   return (
@@ -38,9 +39,20 @@ const Experience = ({ timeline }) => {
                   >
                     {exp.p}
                   </motion.span>
-                  <span className="text-[10px] text-white/40 uppercase tracking-[0.5em] font-black">
-                    {exp.o}
-                  </span>
+                  {NETWORK_URLS[exp.o] ? (
+                    <a
+                      href={NETWORK_URLS[exp.o]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] text-white/40 uppercase tracking-[0.5em] font-black hover:text-amber-500 transition-colors"
+                    >
+                      {exp.o}
+                    </a>
+                  ) : (
+                    <span className="text-[10px] text-white/40 uppercase tracking-[0.5em] font-black">
+                      {exp.o}
+                    </span>
+                  )}
                 </div>
 
                 {/* Central Node */}

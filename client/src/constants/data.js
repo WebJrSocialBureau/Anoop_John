@@ -100,6 +100,18 @@ export const NETWORKS = [
   { name: "SONY MEDIA", url: "https://www.sonypictures.com/" }
 ];
 
+export const NETWORK_URLS = {
+  "Flowers TV": "https://www.flowerstv.in/",
+  "Zee Keralam": "https://www.zee5.com/tv-shows/zee-keralam-hd/0-9-129",
+  "Mazhavil Manorama": "https://www.manoramamax.com/",
+  "Asianet": "https://www.asianetnews.com/",
+  "FLOWERS TV": "https://www.flowerstv.in/",
+  "ZEE KERALAM": "https://www.zee5.com/tv-shows/zee-keralam-hd/0-9-129",
+  "MAZHAVIL MANORAMA": "https://www.manoramamax.com/",
+  "ASIANET": "https://www.asianetnews.com/"
+};
+
+
 export const BLOGS = [
 
   {

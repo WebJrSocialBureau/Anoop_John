@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import PremiumHeading from "./PremiumHeading";
+import { NETWORK_URLS } from "../constants/data";
 
 const Portfolio = ({ projects }) => {
   return (
@@ -48,7 +49,19 @@ const Portfolio = ({ projects }) => {
                       transition={{ delay: 0.3 + i * 0.1, duration: 0.8 }}
                     >
                       <span className="text-amber-500 text-[10px] font-black tracking-[0.4em] uppercase block">
-                        {proj.org} • {i + 1}
+                        {NETWORK_URLS[proj.org] ? (
+                          <a
+                            href={NETWORK_URLS[proj.org]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-white transition-colors"
+                          >
+                            {proj.org}
+                          </a>
+                        ) : (
+                          proj.org
+                        )}{" "}
+                        • {i + 1}
                       </span>
                     </motion.div>
                   </div>

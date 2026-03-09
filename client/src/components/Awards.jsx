@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Award, Trophy, Star, Medal } from "lucide-react";
 import PremiumHeading from "./PremiumHeading";
+import { NETWORK_URLS } from "../constants/data";
 
 const AwardIcon = ({ index }) => {
   const icons = [Award, Trophy, Star, Medal];
@@ -37,7 +38,20 @@ const Awards = ({ awards }) => {
               </p>
               <div className="mt-auto pt-6 border-t border-white/5 w-full">
                 <span className="text-[10px] text-white/40 italic">
-                  For "{award.show}"
+                  For "
+                  {NETWORK_URLS[award.show] ? (
+                    <a
+                      href={NETWORK_URLS[award.show]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-amber-500 transition-colors"
+                    >
+                      {award.show}
+                    </a>
+                  ) : (
+                    award.show
+                  )}
+                  "
                 </span>
               </div>
             </motion.div>
