@@ -62,7 +62,7 @@ const About = () => {
             className="relative z-10"
           >
             <img
-              src="/Anoop John.png"
+              src="/anoop_about.png"
               alt="Anoop John - Award-Winning Media Architect and TV Director"
               className="w-full aspect-4/5 object-cover object-[15%_center] transition-all duration-1000 grayscale hover:brightness-110"
               loading="lazy"

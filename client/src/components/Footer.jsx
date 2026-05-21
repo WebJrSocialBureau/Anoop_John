@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -29,6 +29,63 @@ const Footer = () => {
                 aria-label="Send an email to Anoop John"
               >
                 anoop@time7.in
+              </a>
+              <div className="mt-8 flex items-center gap-4">
+                <a
+                  href="https://www.instagram.com/anopjohn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram - Anoop John"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 text-white hover:text-amber-500 transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/anoopj0hn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook - Anoop John"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 text-white hover:text-amber-500 transition-colors"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="https://in.linkedin.com/in/anoop-john-8b2a63141"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn - Anoop John"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 text-white hover:text-amber-500 transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="https://www.youtube.com/@bigtv24x7live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube - BigTV24x7Live"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border border-white/10 text-white hover:text-amber-500 transition-colors"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
+            <div className="flex flex-row items-center gap-3 text-[9px] md:text-[11px] font-bold text-muted uppercase tracking-[0.2em] mt-6 justify-start w-full text-left">
+              <span>POWERED BY</span>
+
+              <a href="https://www.socialbureau.in/enquiry-form" target="_blank" rel="noopener noreferrer" className="flex justify-start items-center">
+                <img
+                  src="https://www.socialbureau.in/assets/logo.webp"
+                  alt="SocialBureau"
+                  className="h-5 md:h-8 w-auto"
+                />
               </a>
             </div>
           </div>
